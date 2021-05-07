@@ -13,9 +13,9 @@ fi
 
 Then, simply use you `cd` command like before (don't forget to `source ~/.bashrc` to apply your changes!):
 
-`cd -` to go back to the previous directory;
-`cd --` to issue the interactive prompt, and then input the desired number
-`cd -n` to go back to the nth directory, if you know what number it has. e.g.: go back to where you were 3 directory before: `cd -3`.
+- `cd -` to go back to the previous directory;
+- `cd --` to issue the interactive prompt, and then input the desired number
+- `cd -n` to go back to the nth directory, if you know what number it has. e.g.: go back to where you were 3 directory before: `cd -3`.
 
 ## Examples
 
