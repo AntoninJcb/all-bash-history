@@ -1,6 +1,4 @@
-# do ". acd_func.sh"
-# acd_func 1.0.5, 10-nov-2004
-# petar marinov, http:/geocities.com/h2428, this is public domain
+#!/bin/bash
 
 cd_func ()
 {
@@ -9,14 +7,15 @@ cd_func ()
 
   if [[ $1 ==  "--" ]]; then
     dirs -v
-    return 0
+    read -n 1 -r -p 'Chose your path index: ' the_new_dir
+    echo
+    the_new_dir=-${the_new_dir:0:1}
   fi
 
-  the_new_dir=$1
+  [[ -z ${the_new_dir+x} ]] && the_new_dir=$1
   [[ -z $1 ]] && the_new_dir=$HOME
 
   if [[ ${the_new_dir:0:1} == '-' ]]; then
-    #
     # Extract dir N from dirs
     index=${the_new_dir:1}
     [[ -z $index ]] && index=1
